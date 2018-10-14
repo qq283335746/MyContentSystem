@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F663EBF-1347-4F38-8B7D-6A4CE64E11F7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TygaSoft.IDAL</RootNamespace>
+    <AssemblyName>TygaSoft.IDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoCode\IApplications.cs" />
+    <Compile Include="AutoCode\IContentDetail.cs" />
+    <Compile Include="AutoCode\IContentFile.cs" />
+    <Compile Include="AutoCode\IContentType.cs" />
+    <Compile Include="AutoCode\IFeatureUser.cs" />
+    <Compile Include="AutoCode\ISiteMenus.cs" />
+    <Compile Include="AutoCode\ISiteMenusAccess.cs" />
+    <Compile Include="AutoCode\ISiteMembers.cs" />
+    <Compile Include="AutoCode\ISiteMulti.cs" />
+    <Compile Include="AutoCode\ISitePicture.cs" />
+    <Compile Include="AutoCode\ISiteRoles.cs" />
+    <Compile Include="AutoCode\ISiteUsers.cs" />
+    <Compile Include="AutoCode\IUsersInRoles.cs" />
+    <Compile Include="IApplications.cs" />
+    <Compile Include="IContentDetail.cs" />
+    <Compile Include="IContentFile.cs" />
+    <Compile Include="IContentType.cs" />
+    <Compile Include="IFeatureUser.cs" />
+    <Compile Include="ISiteMenus.cs" />
+    <Compile Include="ISiteMulti.cs" />
+    <Compile Include="ISitePicture.cs" />
+    <Compile Include="ISiteRoles.cs" />
+    <Compile Include="ISiteUsers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{4869cb3e-7e27-415a-9d08-62014ece42a2}</Project>
+      <Name>Model %28Model\Model%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
